@@ -13,7 +13,7 @@ def RandomWord(array):
 		return array[random.randint(0,len(array)-1)]
 
 filename = "dict.txt"
-string   = "zotzoot"
+string   = "pustema"
 song     = ""
 
 dictFile = dicthandler.DictionaryFile(filename)
@@ -57,18 +57,11 @@ for i in range(0, length):
 			word2 = dict2.PickRandom()
 		else:
 			compat2 = dict2.LookForLetter(string[i])
-			for w2 in range(0, len(compat2)):
+			for w2 in range(0, len(compat2)-1):
 				for w1 in range(0, dict1.GetLength()):
-					print(compat2)
-					print(w2)
-					print(compat2[w2])
-					print(len(dict1.GetWords()[w1]))
-					print(dicthandler.WhereIn(compat2[w2],string[i]))###issues aaaaa
-					print(dict1.GetWords()[w1])
-					if len(dict1.GetWords()[w1])+dicthandler.WhereIn(compat2[w2],string[i])+1 == i:
-						print('inside')
+					if len(dict1.GetWords()[w1])+dicthandler.WhereIn(compat2[w2],string[i]) == i:
 						word1 = dict1.GetWords()[w1]
-						word2 = compat2[w2]
+						word2 = compat2[w2]		
 						w1 = lend1
 						w2 = len(compat2)
 	if word2 == '':
