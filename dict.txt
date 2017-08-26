@@ -1,0 +1,12 @@
+N a
+N cat
+N dog
+N rice
+N race
+N rad
+V eat
+V sleep
+V pray
+C frick
+C dang
+C shoot
